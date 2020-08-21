@@ -32,6 +32,10 @@ void separate_exr(const string &filename, const bool &extBasename = 0, const flo
 {
 	ImageBuf &in = ImageBuf(filename);
 	int nsubimages = in.nsubimages();
+	if (nsubimages == 0) {
+		cout << "Invalid File or Multi-Parts Error." << endl;
+		return;
+	}
 
 	filesystem::path &path = filesystem::path(filename);
 	const filesystem::path &source_file = path.filename();
