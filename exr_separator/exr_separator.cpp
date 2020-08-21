@@ -14,7 +14,6 @@
 #include <OpenImageIO/imagebufalgo.h>
 
 using namespace OIIO;
-using namespace std;
 using namespace ImageBufAlgo;
 
 using namespace std;
